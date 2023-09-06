@@ -1,0 +1,65 @@
+.navContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 0 30px;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+  background-color: rgba($color: #fff, $alpha: 0.6);
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.1);
+  .logo {
+    display: flex;
+    cursor: pointer;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .slider {
+      width: 75px;
+      height: 38px;
+      background-color: #3b3b3b;
+      color: #ffffff;
+      border-radius: 8px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      transition: all ease 0.4s;
+      animation: 2s ease-in-out waves infinite;
+    }
+  }
+
+  li {
+    line-height: 1.5;
+    padding: 6px 20px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: color 0.3s;
+    position: relative;
+
+    &:nth-child(1):hover ~ .slider {
+      left: 0px;
+    }
+
+    &:nth-child(2):hover ~ .slider {
+      left: 75px;
+    }
+
+    &:nth-child(3):hover ~ .slider {
+      left: 150px;
+    }
+
+    &.active {
+      color: #ffffff;
+    }
+  }
+}
