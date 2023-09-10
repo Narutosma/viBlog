@@ -14,7 +14,7 @@ function App() {
         {/* 内容区域 */}
         <main>
           <Home />
-          <MyProject />
+          {false && <MyProject />}
         </main>
         {/* footer区域 */}
         <Footer></Footer>

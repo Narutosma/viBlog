@@ -7,7 +7,7 @@ export const navItem: INavItem[] = [
     toEl: "#home",
   },
   {
-    text: "项目",
+    text: "Blog",
     left: 75,
     toEl: "#project",
   },
